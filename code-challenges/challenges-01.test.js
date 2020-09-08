@@ -101,6 +101,7 @@ Iterate over the array using forEach to determine the output based on several ru
 
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
+//modular is a remainder 0 type of symbol. 
 
 const fizzbuzz = (arr) => {
  let outputArray = [];
