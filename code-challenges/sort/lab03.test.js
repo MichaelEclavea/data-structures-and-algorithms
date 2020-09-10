@@ -29,14 +29,21 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  arr.sort(a, b);
-  let alph = b - a;
-};
+    fix(arr);
+    return arr;
+ };
+ const fix = (array) =>{
+     array.sort((a, b) =>{
+         return b - a;
+     });
+ };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named alphabetize that takes in an array of strings and returns the same array with the strings sorted alphabetically.
+Write a function named alphabetize that takes in an array of strings and returns the same array 
+with the strings sorted alphabetically.
 
 In this alphabetization, capital letters come before lower case letters.
 
@@ -44,18 +51,39 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  // Solution code here...
+ sortArray(arr);
+ return arr;
+};
+    const sortArray = (arr) =>{
+    arr.sort((a, b) =>{
+        if (a > b) {
+            return 1;
+        } else if (a < b) {
+            return -1;
+        } else {
+            return 0;
+        }
+    });
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named sortByLength that takes in an array of strings and returns the same array, with the strings sorted by their length, lowest to highest.
+Write a function named sortByLength that takes in an array of strings and returns the same array,
+ with the strings sorted by their length, lowest to highest.
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  // Solution code here...
+  sorter(arr);
+  return(arr);
 };
+    let sorter = (arr) => {
+        arr.sort((a, b) =>{
+            a = a.length;
+            b = b.length;
+            return a - b;
+        });
+    };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
