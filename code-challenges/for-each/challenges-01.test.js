@@ -12,7 +12,6 @@ The speaker function should return the string in all uppercase letters only by i
 const greeting = (word) => {
   return word.toUpperCase();
 };
-
 const speaker = (message, callback) => {
   return callback(message);
 };
@@ -84,8 +83,6 @@ const createList = (availableItems) => {
    return array;
 
 };
-
-
 
 
 /* ------------------------------------------------------------------------------------------------
