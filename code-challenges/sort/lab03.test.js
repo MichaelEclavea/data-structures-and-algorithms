@@ -18,7 +18,8 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const changeAllClassNames = () => {
-  // Solution code here...
+$('li').addClass('fruit');
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,7 +29,8 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  arr.sort(a, b);
+  let alph = b - a;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -186,7 +188,7 @@ $ = createSnippetWithJQuery(`
 `);
 
 const addPearClass = () => {
-  // Solution code here...
+  $('li').attr('class=fruit');
 };
 
 /* ------------------------------------------------------------------------------------------------
