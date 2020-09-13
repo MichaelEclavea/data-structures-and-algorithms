@@ -133,63 +133,90 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let result = [];
-  let array = [];
-  let list = gruffaloCrumble.ingredients;
-  array.push(list);
+ let result = [];
+ 
 
-  let zero = list[0];
-  let zeroString = zero.substring(15);
-  result.push(zeroString);
+ let measuredListArray = gruffaloCrumble.ingredients;
 
-  let one = list[1];
-  let oneString = one.substring(9);
-  result.push(oneString);
+ measuredListArray.forEach( (a,b) => {
+   let measuredIngredient = a;
+   // break each long string into an array of single characters
+   let singleCharacterArr = [];
 
-  let two = list[2];
-  let twoString = two.substring(9);
-  result.push(twoString);
+   for (let j = 0; j < measuredIngredient.length; j++) {
+     let singleCharacter = measuredIngredient.slice(j,j+1);
+     //I was missing this +1 for an hour or more
+     singleCharacterArr.push(singleCharacter);
+   }
 
-  let three = list[3];
-  let threeString = three.substring(9);
-  result.push(threeString);
+   //find the first space
+   let firstSpace = singleCharacterArr.indexOf(' ');
 
-  let four = list[4];
-  let fourString = four.substring(15);
-  result.push(fourString);
+   //find the second space... have to start at either the first space or first space plus 1
+   let whereToStartSearch = firstSpace + 1;
+   let secondSpace = singleCharacterArr.indexOf(' ',whereToStartSearch);
 
-  let five = list[5];
-  let fiveString = five.substring(16);
-  result.push(fiveString);
+   let whereToCut = secondSpace + 1;
+   let nonMeasuredIndieFood = measuredIngredient.slice(whereToCut);
 
-  let six = list[6];
-  let sixString = six.substring(8);
-  result.push(sixString);
+   result.push(nonMeasuredIndieFood);
+ });
+ return result;
+};
 
-  let seven = list[7];
-  let sevenString = seven.substring(8);
-  result.push(sevenString);
 
-  let eight = list[8];
-  let eightString = eight.substring(8);
-  result.push(eightString);
+  // let zero = list[0];
+  // let zeroString = zero.substring(15);
+  // result.push(zeroString);
 
-  let nine = list[9];
-  let nineString = nine.substring(8);
-  result.push(nineString);
+  // let one = list[1];
+  // let oneString = one.substring(9);
+  // result.push(oneString);
 
-  let ten = list[10];
-  let tenString = ten.substring(10);
-  result.push(tenString);
+  // let two = list[2];
+  // let twoString = two.substring(9);
+  // result.push(twoString);
+
+  // let three = list[3];
+  // let threeString = three.substring(9);
+  // result.push(threeString);
+
+  // let four = list[4];
+  // let fourString = four.substring(15);
+  // result.push(fourString);
+
+  // let five = list[5];
+  // let fiveString = five.substring(16);
+  // result.push(fiveString);
+
+  // let six = list[6];
+  // let sixString = six.substring(8);
+  // result.push(sixString);
+
+  // let seven = list[7];
+  // let sevenString = seven.substring(8);
+  // result.push(sevenString);
+
+  // let eight = list[8];
+  // let eightString = eight.substring(8);
+  // result.push(eightString);
+
+  // let nine = list[9];
+  // let nineString = nine.substring(8);
+  // result.push(nineString);
+
+  // let ten = list[10];
+  // let tenString = ten.substring(10);
+  // result.push(tenString);
   
-  let eleven = list[11];
-  let elevenString = eleven.substring(10);
-  result.push(elevenString);
+  // let eleven = list[11];
+  // let elevenString = eleven.substring(10);
+  // result.push(elevenString);
 
-  return result;
+//   return result;
+//  return array;
 
-
-}
+// }
 
 
 /* ------------------------------------------------------------------------------------------------
