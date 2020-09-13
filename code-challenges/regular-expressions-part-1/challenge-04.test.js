@@ -90,7 +90,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  let regex = /(^oct$ | ^october$ | ^October$ | ^Oct$)/g;
+  let regex = /(^oct$|^october$|^October$|^Oct$)/g;
   return regex.test(input);
 };
 
@@ -105,7 +105,8 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
+  let regex = /\w+\s/g;
+  return str.match(regex);
 };
 
 /* ------------------------------------------------------------------------------------------------
