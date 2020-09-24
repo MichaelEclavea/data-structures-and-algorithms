@@ -99,10 +99,9 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  const array = [];
-  arr.
+ return arr[2].items[1].quantity;
 
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
